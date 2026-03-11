@@ -10,6 +10,14 @@
     <meta property="og:title" content="Tổng Đài Taxi Bắc Giang - Đặt Xe Nhanh 24/7">
     <meta property="og:description" content="Đặt taxi Bắc Giang nhanh chóng, giá rẻ. Phục vụ 24/7. Gọi ngay 0867.858.071">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taxibacgiang24h.obito7.site/">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="Tổng Đài Taxi Bắc Giang">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tổng Đài Taxi Bắc Giang - Đặt Xe Nhanh 24/7">
+    <meta name="twitter:description" content="Đặt taxi Bắc Giang nhanh chóng, giá rẻ. Phục vụ 24/7. Gọi ngay 0867.858.071">
+    <link rel="canonical" href="https://taxibacgiang24h.obito7.site/">
+    <link rel="icon" type="image/svg+xml" href="phone-call-svgrepo-com.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -237,6 +245,7 @@
             height: 20px;
             object-fit: contain;
             vertical-align: middle;
+            filter: brightness(0) invert(1);
         }
 
         .phone-icon-lg {
@@ -244,6 +253,7 @@
             height: 28px;
             object-fit: contain;
             vertical-align: middle;
+            filter: brightness(0) invert(1);
         }
 
         @keyframes pulse-btn {
@@ -486,6 +496,10 @@
         footer a {
             color: #ffd700;
             text-decoration: none;
+        }
+
+        footer address {
+            font-style: normal;
         }
 
         /* Floating buttons */
@@ -919,6 +933,68 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 24px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 300;
+            color: #e74c3c;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 24px 20px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
     </style>
 </head>
 <body>
@@ -939,10 +1015,12 @@
                 </div>
             </div>
             <a href="tel:0867858071" class="header-phone">
-                <img src="phone.jpg" alt="Phone" class="phone-icon"> <span class="phone-text">0867.858.071</span>
+                <img src="phone-call-svgrepo-com.svg" alt="Gọi taxi Bắc Giang" class="phone-icon" width="20" height="20"> <span class="phone-text">0867.858.071</span>
             </a>
         </div>
     </header>
+
+    <main>
 
     <!-- Hero -->
     <section class="hero">
@@ -958,10 +1036,10 @@
             </p>
             <div class="hero-actions">
                 <a href="tel:0867858071" class="btn-call">
-                    <img src="phone.jpg" alt="Phone" class="phone-icon"> Gọi Ngay: 0867.858.071
+                    <img src="phone-call-svgrepo-com.svg" alt="Gọi taxi Bắc Giang" class="phone-icon" width="20" height="20"> Gọi Ngay: 0867.858.071
                 </a>
                 <a href="https://zalo.me/0867858071" target="_blank" rel="noopener noreferrer" class="btn-zalo">
-                    <img src="Icon_of_Zalo.svg.png" alt="Zalo" class="zalo-icon"> Đặt Qua Zalo
+                    <img src="Icon_of_Zalo.svg.png" alt="Đặt taxi qua Zalo" class="zalo-icon" width="24" height="24"> Đặt Qua Zalo
                 </a>
             </div>
         </div>
@@ -1075,34 +1153,79 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="section-title fade-in">
+            <h3>Câu Hỏi Thường Gặp</h3>
+            <p>Giải đáp thắc mắc về dịch vụ taxi Bắc Giang</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">Số điện thoại tổng đài taxi Bắc Giang là bao nhiêu?</button>
+                <div class="faq-answer">
+                    <p>Quý khách có thể gọi ngay tổng đài taxi Bắc Giang theo số <strong>0867.858.071</strong>, phục vụ 24/7 kể cả ngày lễ, tết. Ngoài ra, bạn cũng có thể đặt xe nhanh qua Zalo.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">Taxi Bắc Giang có phục vụ 24/7 không?</button>
+                <div class="faq-answer">
+                    <p>Có, dịch vụ taxi Bắc Giang hoạt động 24 giờ mỗi ngày, 7 ngày trong tuần. Kể cả đêm khuya, sáng sớm hay ngày lễ tết, chúng tôi luôn sẵn sàng phục vụ quý khách.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">Giá taxi từ Bắc Giang đi Hà Nội là bao nhiêu?</button>
+                <div class="faq-answer">
+                    <p>Giá taxi Bắc Giang đi Hà Nội dao động tùy loại xe và điểm đón/trả. Chúng tôi cam kết báo giá trước, minh bạch, không phát sinh chi phí. Gọi <strong>0867.858.071</strong> để được báo giá chính xác.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">Có dịch vụ đưa đón sân bay Nội Bài không?</button>
+                <div class="faq-answer">
+                    <p>Có, chúng tôi cung cấp dịch vụ đưa đón sân bay Nội Bài chuyên nghiệp, giá cố định, đúng giờ. Xe đời mới, sạch sẽ, tài xế kinh nghiệm. Đặt trước để đảm bảo có xe.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" aria-expanded="false">Đặt taxi Bắc Giang qua Zalo được không?</button>
+                <div class="faq-answer">
+                    <p>Được, quý khách có thể đặt taxi qua Zalo nhanh chóng và tiện lợi. Chỉ cần nhắn tin qua Zalo số <strong>0867.858.071</strong>, nhân viên sẽ xác nhận và điều xe ngay cho bạn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta">
         <h3>Đặt Taxi Bắc Giang Ngay!</h3>
         <p>Chỉ một cuộc gọi — Có xe trong 5 phút</p>
-        <a href="tel:0867858071" class="cta-phone"><img src="phone.jpg" alt="Phone" class="phone-icon-lg"> 0867.858.071</a>
+        <a href="tel:0867858071" class="cta-phone"><img src="phone-call-svgrepo-com.svg" alt="Gọi taxi Bắc Giang" class="phone-icon-lg" width="28" height="28"> 0867.858.071</a>
         <div class="cta-buttons">
             <a href="tel:0867858071" class="btn-call">
-                <img src="phone.jpg" alt="Phone" class="phone-icon"> Gọi Đặt Xe Ngay
+                <img src="phone-call-svgrepo-com.svg" alt="Gọi taxi Bắc Giang" class="phone-icon" width="20" height="20"> Gọi Đặt Xe Ngay
             </a>
             <a href="https://zalo.me/0867858071" target="_blank" rel="noopener noreferrer" class="btn-zalo">
-                <img src="Icon_of_Zalo.svg.png" alt="Zalo" class="zalo-icon"> Nhắn Tin Qua Zalo
+                <img src="Icon_of_Zalo.svg.png" alt="Đặt taxi qua Zalo" class="zalo-icon" width="24" height="24"> Nhắn Tin Qua Zalo
             </a>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer>
-        <p>© 2026 Tổng Đài Taxi Bắc Giang — Liên hệ: <a href="tel:0867858071">0867.858.071</a> | <a href="https://zalo.me/0867858071" target="_blank" rel="noopener noreferrer">Zalo</a></p>
+        <address>
+            <p>© 2026 Tổng Đài Taxi Bắc Giang — Liên hệ: <a href="tel:0867858071">0867.858.071</a> | <a href="https://zalo.me/0867858071" target="_blank" rel="noopener noreferrer">Zalo</a></p>
+            <p style="margin-top: 4px;">Địa chỉ: TP. Bắc Giang, Tỉnh Bắc Giang, Việt Nam</p>
+        </address>
         <p style="margin-top: 8px; font-size: 12px;">Taxi Mai Linh Bắc Giang · Xanh SM Bắc Giang · Đặt taxi giá rẻ Bắc Giang</p>
     </footer>
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://zalo.me/0867858071" target="_blank" rel="noopener noreferrer" class="float-btn float-zalo" title="Nhắn Zalo">
-            <img src="Icon_of_Zalo.svg.png" alt="Zalo" class="zalo-icon-lg">
+        <a href="https://zalo.me/0867858071" target="_blank" rel="noopener noreferrer" class="float-btn float-zalo" title="Nhắn Zalo" aria-label="Liên hệ qua Zalo">
+            <img src="Icon_of_Zalo.svg.png" alt="Đặt taxi qua Zalo" class="zalo-icon-lg" width="32" height="32" loading="lazy">
         </a>
-        <a href="tel:0867858071" class="float-btn float-call" title="Gọi ngay">
-            <img src="phone.jpg" alt="Phone" class="phone-icon-lg">
+        <a href="tel:0867858071" class="float-btn float-call" title="Gọi ngay" aria-label="Gọi tổng đài taxi">
+            <img src="phone-call-svgrepo-com.svg" alt="Gọi taxi Bắc Giang" class="phone-icon-lg" width="28" height="28" loading="lazy">
         </a>
     </div>
 
@@ -1120,6 +1243,25 @@
             document.querySelectorAll('.fade-in').forEach(function(el) {
                 observer.observe(el);
             });
+
+            // FAQ toggle
+            document.querySelectorAll('.faq-question').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var item = this.parentElement;
+                    var answer = item.querySelector('.faq-answer');
+                    var isActive = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item').forEach(function(i) {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+                    if (!isActive) {
+                        item.classList.add('active');
+                        this.setAttribute('aria-expanded', 'true');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
         });
     </script>
 
@@ -1130,14 +1272,91 @@
         "@type": "LocalBusiness",
         "name": "Tổng Đài Taxi Bắc Giang",
         "description": "Dịch vụ taxi Bắc Giang uy tín, giá rẻ. Đặt xe nhanh 24/7. Taxi Mai Linh, Xanh SM Bắc Giang.",
-        "telephone": "0867858071",
+        "url": "https://taxibacgiang24h.obito7.site/",
+        "telephone": "+84867858071",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "TP. Bắc Giang",
             "addressLocality": "Bắc Giang",
+            "addressRegion": "Bắc Giang",
             "addressCountry": "VN"
         },
-        "openingHours": "Mo-Su 00:00-23:59",
-        "priceRange": "$$"
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "21.2731",
+            "longitude": "106.1943"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "priceRange": "$$",
+        "areaServed": {
+            "@type": "City",
+            "name": "Bắc Giang"
+        },
+        "sameAs": ["https://zalo.me/0867858071"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Dịch vụ Taxi",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Taxi Nội Thành Bắc Giang"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Taxi Đường Dài"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Đưa Đón Sân Bay Nội Bài"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Taxi Hợp Đồng"}}
+            ]
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Số điện thoại tổng đài taxi Bắc Giang là bao nhiêu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Quý khách có thể gọi ngay tổng đài taxi Bắc Giang theo số 0867.858.071, phục vụ 24/7 kể cả ngày lễ, tết."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Taxi Bắc Giang có phục vụ 24/7 không?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Có, dịch vụ taxi Bắc Giang hoạt động 24 giờ mỗi ngày, 7 ngày trong tuần."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Giá taxi từ Bắc Giang đi Hà Nội là bao nhiêu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Giá taxi Bắc Giang đi Hà Nội dao động tùy loại xe và điểm đón/trả. Gọi 0867.858.071 để được báo giá chính xác."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Có dịch vụ đưa đón sân bay Nội Bài không?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Có, chúng tôi cung cấp dịch vụ đưa đón sân bay Nội Bài chuyên nghiệp, giá cố định, đúng giờ."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Đặt taxi Bắc Giang qua Zalo được không?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Được, quý khách có thể đặt taxi qua Zalo số 0867.858.071, nhân viên sẽ xác nhận và điều xe ngay."
+                }
+            }
+        ]
     }
     </script>
 </body>
