@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://taxibacgiang24h.obito7.site/sitemap.xml
+Sitemap: https://taxibacgiang24h.taxi.io.vn/sitemap.xml
